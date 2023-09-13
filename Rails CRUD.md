@@ -95,18 +95,22 @@ The new action displays the form to create a new task, and the create action han
 
 Create a view file named new.html.erb in the app/views/tasks directory. This file should contain a form for creating tasks.
 
-<%= form_for @task do |f| %>
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+    <%= form_for @task do |f| %>
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit 'Create Task' %>
-  </div>
-<% end %>
+      <div class="actions">
+        <%= f.submit 'Create Task' %>
+      </div>
+    <% end %>
+
+### Create Route
+
+No additional routes are needed for the create action since it's handled by the resources declaration in config/routes.rb.
